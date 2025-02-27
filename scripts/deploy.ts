@@ -5,7 +5,7 @@ async function deployContract() {
 
     console.log("Deploying NFT Contract...");
 
-    const deployedContract = await nft.deploy("Olasunkanmi", "SKM");
+    const deployedContract = await nft.deploy("Armolas", "ARM");
     await deployedContract.waitForDeployment();
 
     console.log(`🎉 Contract deployed at: ${deployedContract.target}`);
