@@ -108,7 +108,7 @@ contract OnChainNFT is IERC721, IERC165, IERC721Metadata{
         emit Mint(_to, id);
     }
 
-    function supportsInterface(bytes4 interfaceId) external pure override returns (bool){
+    function supportsInterface(bytes4 interfaceId) external pure override(IERC165) returns (bool){
         return interfaceId == type(IERC721).interfaceId ||
                 interfaceId == type(IERC721Metadata).interfaceId ||
                 interfaceId == type(IERC165).interfaceId;
